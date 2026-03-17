@@ -1,0 +1,19 @@
+name: Student CI/CD
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Java version
+        uses: actions/setup-java@v2
+        with:
+          java-version: "11"
+
+      - name: Run the java
+        run: javac src/Main.java
+      - name: Execute the java program
+        run: java src/Main
