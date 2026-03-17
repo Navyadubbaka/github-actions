@@ -17,4 +17,4 @@ jobs:
       - name: Run the java
         run: javac src/Main.java
       - name: Execute the java program
-        run: java src/Main
+        run: java -cp src Main
